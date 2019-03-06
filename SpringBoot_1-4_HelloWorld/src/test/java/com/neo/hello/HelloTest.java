@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 
 @SpringBootTest
@@ -32,8 +33,8 @@ public class HelloTest {
         .accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());*/
         //改进，对返回值进行判断
         mockMvc.perform(MockMvcRequestBuilders.post("/hello?name=小明")
-        .accept(MediaType.APPLICATION_JSON_UTF8))
-        .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("小明")));
+                .accept(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("小明")));
     }
 
 }
