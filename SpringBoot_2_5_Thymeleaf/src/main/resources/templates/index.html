@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+     layout 是文件夹地址，fileName 是文件名.
+     语法这样写 layout/fileName:htmlhead，
+     其中，htmlhead 是指定义的代码片段，如 th:fragment="htmlhead"。
+    -->
+    <div th:insert="layout/copyright :: copyright"></div>
+    <div th:replace="layout/copyright :: copyright"></div>
+</body>
+</html>

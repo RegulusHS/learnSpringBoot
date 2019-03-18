@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Url</title>
+</head>
+<body>
+    <div>
+        <h1>URL</h1>
+        <a th:href="@{http://www.ityouknow.com/{type}(type=${type})}">link1</a>
+        <br/>
+        <a th:href="@{http://www.ityouknow.com/{pageId}/can-use-springcloud.html(page=${pageId})}">view</a>
+        <div th:style="'background:url(' + @{${img}} + ');'">
+            <br/><br/><br/>
+        </div>
+    </div>
+</body>
+</html>
