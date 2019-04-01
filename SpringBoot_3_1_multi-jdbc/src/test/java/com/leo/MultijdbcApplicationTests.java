@@ -1,4 +1,4 @@
-package com.leo.multijdbc;
+package com.leo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +11,7 @@ public class MultijdbcApplicationTests {
 
     @Test
     public void contextLoads() {
+
     }
 
 }

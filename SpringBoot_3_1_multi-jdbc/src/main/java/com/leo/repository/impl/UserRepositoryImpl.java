@@ -56,6 +56,9 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User findById(long id, JdbcTemplate jdbcTemplate) {
+        if(jdbcTemplate == null) {
+            jdbcTemplate = primaryJdbcTemplate;
+        }
         return jdbcTemplate.queryForObject("SELECT * FROM users WHERE id = ?", new Object[] {id}, new BeanPropertyRowMapper<User>(User.class));
     }
 
